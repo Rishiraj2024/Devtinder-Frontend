@@ -7,12 +7,12 @@ import { addUserFeed } from '../utils/feedSLilce'
 import UserCard from './UserCard'
 
 const Feed = () => {
-     n
+    
 const dispatch=useDispatch()
   const getFeed=async()=>{
     // if(feed || feed>0)return
 try{
-   const res=await axios.get(BASE_URL+"/userfeed",{withCredentials:true})
+   const res=await axios.get("http://localhost:3000/userfeed",{withCredentials:true})
   //  console.log(res.data)
    dispatch(addUserFeed(res.data))
 }catch(err){
